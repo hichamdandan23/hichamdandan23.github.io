@@ -1,6 +1,9 @@
 body{
     background: dimgray;
-    font-family: Arial, "Arial Rounded MT Bold", sans-serif;
+    font-family: Arial, "Trebuchet MS", sans-serif;
+    font-style: oblique;
+    font-weight: lighter;
+    font-size: 20px;
 }
 
 p span{
