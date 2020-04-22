@@ -1,0 +1,23 @@
+body{
+    background: dimgray;
+    font-family: Arial, "Arial Rounded MT Bold", sans-serif;
+}
+
+p span{
+    color: #fff215;
+}
+
+ol li a{
+    color: #d82917;
+}
+p{
+    color: #ecf1d7;
+}
+
+li{
+    color: #ecf1d7;
+}
+
+.moods span{
+    color: #ecf1d7;
+}
