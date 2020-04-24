@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24fd6e37-b404-4114-833a-667eb2bfd5b1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aboutMe.html" beforeDir="false" afterPath="$PROJECT_DIR$/aboutMe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/aboutCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/aboutCSS.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587415587242</updated>
       <workItem from="1587415595138" duration="2136000" />
-      <workItem from="1587423255595" duration="13296000" />
+      <workItem from="1587423255595" duration="21955000" />
     </task>
     <servers />
   </component>
@@ -69,5 +69,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="509" y="281" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1587418019179" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1587752572887">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1587752572887" />
   </component>
 </project>
