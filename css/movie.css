@@ -24,6 +24,9 @@ header img{
 }
 
 .container{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2;
     position: relative;
     max-width: 800px;
     margin: auto;
@@ -43,17 +46,26 @@ body > h1{
     top: 0;
     right: 0;
     bottom: 0;
-    display: block;
-    height: auto;
+    display: inline-block;
     background-color: #A2B964;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 17px;
 
 }
 
+dt{
+    font-weight: bold;
+    margin-top: 10pt;
+}
+
+ul{
+    list-style-type: none;
+}
+
 .overview{
     margin-left: 10pt;
     font: 8pt Arial, "Arial Rounded MT Bold", sans-serif;
+    line-height: 10pt;
 }
 
 .right img{
@@ -90,6 +102,11 @@ body > h1{
     max-width: 550px;
 }
 
+.item{
+    margin: 8px;
+    width: 240px;
+}
+
 .box{
     font-size: 8pt;
     background-color: #E8DC9B;
@@ -98,9 +115,14 @@ body > h1{
     padding: 8px;
 }
 
-.item{
-    margin: 8px;
-    width: 240px;
+.client img{
+    display: inline-block;
+}
+
+.client .comment{
+    display: inline-block;
+    margin-left: 5px;
+    font-family: Italic;
 }
 
 footer{
