@@ -1,0 +1,86 @@
+body{
+		width: 80%;
+		margin: 0px auto;
+	}
+	p,li,span{
+		color:#404040 ;
+		font-family: Georgia,Garamond;
+	}
+	a{color:#A4A400; text-decoration: underline;}
+
+	.big-title{
+	color: #A4A400;
+    text-align: center;
+    background: #F0F0F0;
+    font-size: 22pt;
+    text-decoration: underline;
+    font-family: Lucida Sans Unicode, Helvetica, Arial;
+    font-weight: bold;
+	}
+	.small-title{
+	color: #A4A400;
+    text-align: left;
+    background: #F0F0F0;
+    font-size: 18pt;
+    text-decoration: underline;
+    font-family: Lucida Sans Unicode, Helvetica, Arial;
+    font-weight: normal;
+	}
+
+	ul.Copyright {
+    float: right;
+    list-style: none;
+}
+
+ul.Copyright span {
+    float: right;
+    margin-left: 10px;
+}
+
+.navs li {
+    list-style: none;
+}
+
+	.tooltip {
+  position: relative;
+  text-decoration: underline;
+}
+
+.quotations{
+	    background: #FFFFA8;
+    width: 80%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.validation li{
+	list-style: none;
+}
+.validation ul{
+display: flex;
+	float: right; }
+.validation{
+	
+
+	display: inline-block;
+    width: 100%;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
