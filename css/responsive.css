@@ -4,6 +4,12 @@ body {
     color: black;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-areas:
+    'header header header header header header'
+    'nav nav nav nav nav nav'
+    'section section section section section section'
+    'footer footer footer footer footer footer';
 }
 
 header {
@@ -16,7 +22,6 @@ header {
 
 nav {
     background: darkslategray;
-    margin-top: -15px;
 }
 
 li {
@@ -30,6 +35,8 @@ li {
 
 ul {
     padding: 0;
+    margin: 0px;
+    margin-bottom: 15px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -66,6 +73,12 @@ footer {
     padding: 20px 20px;
     margin: 0px;
 }
+
+.item1 { grid-area: header; }
+.item2 { grid-area: nav; }
+.item3 { grid-area: section; }
+.item4 { grid-area: footer; }
+
 article:nth-child(1){order:1;}
 article:nth-child(2){order:2;}
 article:nth-child(3){order:3;}
