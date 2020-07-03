@@ -21,7 +21,7 @@ describe("Bubble Sort Array",()=>{
 
 describe("Person Teacher Inheritance",()=>{
     it("Teacher Test",()=>{
-        assert.equal(new Teacher("Hicham",24).teach("JS"),"Hicham is now teaching Js");
+        assert.equal(new Teacher("Hicham",24).teach("JS"),"Hicham is now teaching JS");
     });
 
 });
