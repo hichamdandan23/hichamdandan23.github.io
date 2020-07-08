@@ -1,17 +1,42 @@
-function longestNoSpace(s, ...more)
-{
-  let maxSpace = 0;
+class Computer{
+  constructor(ram, cpu, storage)
+  {
+    this.ram = ram;
+    this.cpu = cpu;
+    this.storage = storage;
+
+  }
+
+  getRam()
+  {
+    return this.ram;
+  }
+
+  getCpu()
+  {
+    return this.cpu;
+  }
+
+  getStorage()
+  {
+    return this.storage;
+  }
 
   
+  runProgram(program){
+    console.log(`running ${program}`)
+  }
 
 }
 
-function countSpace(s)
-{
-    let countSpace = 0;
-    for(let i = 0; i < s.length ; i++)
-        if(s[i] === ' ') countSpace++;
-        
-        
-    return countSpace;
+class Laptop extends Computer{
+  constructor(ram, cpu, storage, battery)
+  {
+    super(ram, cpu, storage);
+    this.battery = battery;
+  }
+
+  carryAround(){
+    console.log(`carrying laptop:  cpu" + ${this.cpu} +" ram: " + ${this.ram} + " storage: " + ${this.storage} + " battery: " + ${this.battery}`);
+  }
 }

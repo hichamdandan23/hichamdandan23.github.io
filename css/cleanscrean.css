@@ -1,0 +1,19 @@
+.circle{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: brown;
+    left: 40%;
+    top:40%;
+    z-index: 3;
+}
+
+.menu{
+    position: relative;
+    z-index: 30;
+    margin-top: 35vh;
+    margin-left: 1em;
+    width: fit-content;
+    
+}
