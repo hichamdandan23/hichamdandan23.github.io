@@ -1,108 +1,874 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>HomePage</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <meta charset="utf-8">
+    <title>FULL STACK DEVELOPER - Hicham Dandan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+     
+    <meta property="og:type"               content="profil" />
+    <meta property="og:title"              content="FULL STACK DEVELOPER - Hicham Dandan" />
+    <meta property="og:description"        content="I'am a Full stack developer with 5+ years of experience based in FairField, IOWA state, I create webapps, websites and web-everything with passion. I'm curious about why something isn’t working well" />
+    <meta property="og:image"              content="img/profil (1).jpg" />
+
+
+    <!-- Template Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- Template CSS Files -->
+    <link type="text/css" media="all" href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" media="all" href="css/jquery.animatedheadline.css" rel="stylesheet">
+    <link type="text/css" media="all" href="css/font-awesome.min.css" rel="stylesheet">
+    <link type="text/css" media="all" href="css/style.css" rel="stylesheet">
+    <link type="text/css" media="all" href="css/skins/orange.css" rel="stylesheet">
+
+    <!-- Template JS Files -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Live Style Switcher -
+	<link rel="alternate stylesheet"  type="text/css" title="blue" href="css/skins/blue.css" disabled>
+    <link rel="alternate stylesheet"  type="text/css" title="goldenrod" href="css/skins/goldrenrod.css" disabled>
+    <link rel="alternate stylesheet"  type="text/css" title="green" href="css/skins/green.css" disabled>
+    <link rel="alternate stylesheet"  type="text/css" title="magenta" href="css/skins/magenta.css" disabled>
+    <link rel="alternate stylesheet"  type="text/css" title="orange" href="css/skins/orange.css" >
+    <link rel="alternate stylesheet"  type="text/css" title="red" href="css/skins/red.css" disabled>
+    <link rel="alternate stylesheet"  type="text/css" title="yellow" href="css/skins/yellow.css" disabled> 
+    <link rel="alternate stylesheet"  type="text/css" title="yellowgreen" href="css/skins/yellowgreen.css" disabled>demo only -->
+    <link rel="stylesheet" type="text/css" href="css/styleswitcher.css" />
+
 </head>
-<body>
-<header>
-    <div class="head">
-        <img src="images/profile.jpg" alt="profile">
+
+<body class="dark bgimage">
+    <div class="page">
+        <!-- Header Starts -->
+    <header id="header">
+		<div class="nav-container">
+			<div>
+				<!-- Mobile Navigation Starts -->
+				<ul id="nav" class="navigation">
+					<li class="active">
+						<div>
+							<a id="link-home" href="#home" class="active">
+								<i class="fa fa-home"></i><span>Home</span>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a id="link-about" href="#about">
+								<i class="fa fa-user"></i><span>About me</span>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a id="link-work" href="#work">
+								<i class="fa fa-briefcase"></i><span>my Portfolio</span>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a id="link-contact" href="#contact">
+								<i class="fa fa-envelope-open"></i><span>get in touch</span>
+							</a>
+						</div>
+					</li>
+				</ul>
+				<!-- Mobile Navigation Ends -->
+			</div>
+		</div>
+		<!-- Stretchy Navigation Starts -->
+		<div class="cd-stretchy-nav">
+			<a class="cd-nav-trigger" href="#0">
+				<span aria-hidden="true"></span>
+			</a>
+			<ul class="stretchy-nav">
+				<li class="active"><a href="#home"><span>Home</span></a></li>
+				<li><a href="#about"><span>About</span></a></li>
+				<li><a href="#works"><span>Portfolio</span></a></li>
+				<li><a href="#contact"><span>Contact</span></a></li>
+			</ul>
+			<span aria-hidden="true" class="stretchy-nav-bg"></span>
+		</div>
+		<!-- Stretchy Navigation Ends -->
+    </header>
+    <!-- Header Ends -->
+        <!-- Main Content Starts -->
+        <main id="main">
+            <!-- Back To Home Starts [ONLY MOBILE] -->
+            <span class="back-mobile" id="back-mobile"><i class="fa fa-arrow-left"></i></span>
+            <!-- Back To Home Ends [ONLY MOBILE] -->
+            <!-- Home Section Starts -->
+            <section id="home" class="active">
+                <!-- Text Rotator Starts -->
+                <div class="main-text-container">
+					<img class="leftimagepicture" src="img/profil (1).jpg" alt=""/>
+                    <div class="main-text" id="selector">
+                        <h3>Hi there !</h3>
+                        <h1 class="ah-headline">
+					I'm
+						<span class="ah-words-wrapper">
+							<b class="is-visible">Hicham DANDAN</b>
+							<b>a Full stack developer</b>
+						</span>
+                    </h1>
+                        <p>Talented and skillful <b>Full stack Developer</b> based in Jacksonville, Florida.<br>
+                        playing a critical role in business and enterprise software design, development, testing, and deployment of both front and back-end systems along with production support. Experienced in implementing best programming practices, design and architectural principles and testing approaches to establish and maintain optimal development approaches.
+                        <br> Skilled in Java, PHP, Spring MVC, Microservices, Spring Cloud, Spring security, Hibernate, Docker, JavaScript, jQuery, AJAX, CSS3, HTML5, Angular, Laravel and VueJS.</p>
+                        
+                        <div class="call-to-actions-home">
+                            <div class="text-left">
+                                <a href="#about" class="btn link-portfolio-one"><span><i class="fa fa-user"></i>more about me</span></a>
+                                <a href="#work" class="btn btn-secondary link-portfolio-two"><span><i class="fa fa-suitcase"></i>portfolio</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Text Rotator Ends -->
+            </section>
+            <!-- Home Section Ends -->
+            <!-- About Section Starts -->
+            <section id="about">
+                <!-- Main Heading Starts -->
+                <div class="container page-title text-center">
+                    <h2 class="text-center">about <span>me</span></h2>
+                    <span class="title-head-subtitle">“First, solve the problem. Then, write the code.” – John Johnson</span>
+                </div>
+                <!-- Main Heading Ends -->
+                <div class="container infos">
+                    <div class="row personal-info">
+                        <!-- Personal Infos Starts -->
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+							<div class="image-container">
+								<img class="img-fluid d-block" src="img/profil (1).jpg"  alt="" />
+							</div>
+							<p  class="d-block d-md-none"> Talented and skillful <b>Full stack Developer</b> based in Jacksonville, Florida.<br>
+                        playing a critical role in business and enterprise software design, development, testing, and deployment of both front and back-end systems along with production support. Experienced in implementing best programming practices, design and architectural principles and testing approaches to establish and maintain optimal development approaches.
+                        <br> Skilled in Java, PHP, Spring MVC, Microservices, Spring Cloud, Spring security, Hibernate, Docker, JavaScript, jQuery, AJAX, CSS3, HTML5, Angular, Laravel and VueJS.</p>
+						</div>
+						<div class="row col-xl-6 col-lg-6 col-md-12">
+							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+								<ul class="list-1">
+									<li>
+										<h6><span class="font-weight-600">First Name</span>Hicham</h6>
+									</li>
+									<li>
+										<h6><span class="font-weight-600">Last Name</span>Dandan</h6>
+									</li>
+									<li>
+										<h6><span class="font-weight-600">Birthdate</span>May 08,1996</h6>
+									</li>
+									<li>
+										<h6><span class="font-weight-600">Nationality</span>Moroccan</h6>
+									</li>
+									
+								</ul>
+                            </div>
+                           
+							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+								<ul class="list-2">
+                                    <li>
+										<h6><span class="font-weight-600">Experience</span>2+ years</h6>
+									</li>
+									<li>
+										<h6><span class="font-weight-600">Phone</span>+1 (904)-418-7400</h6>
+									</li>
+									<li>
+										<h6><span class="font-weight-600">Email</span>hicham.dandan@gmail.com</h6>
+									</li>
+									<li>
+										<h6><span class="font-weight-600">Skype</span>live:hicham.dandan_1</h6>
+									</li>
+									
+								</ul>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+								<ul class="list-2">
+                                    <li>
+										<h6><span class="font-weight-600">Address</span>8230 Dames Point Crossing Blvd N, Jacksonvile, FL, 32277</h6>
+                                    </li>
+                                    <li>
+										<h6><span class="font-weight-600">Langages</span>English, French, Arabic, Darija</h6>
+									</li>
+								</ul>
+                            </div>
+							<div class="col-12 resume-btn-container">
+								<a href="#" class="btn btn-resume"><span><i class="fa fa-download"></i>download my cv</span></a>
+							</div>
+						</div>
+                        <!-- Personal Infos Ends -->
+                    </div>
+                </div>
+                <!-- Download CV Starts -->
+                <div class="container col-12 mx-auto text-center">
+                    <hr class="about-section" />
+                </div>
+                <!-- Download CV Ends -->
+                <!-- Resume Starts -->
+                <div class="resume-container">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Experience Starts -->
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <h2 class="font-weight-600 uppercase title-section">experience</h2>
+                                <div class="resume-items">
+                                    <!-- Item Starts -->
+                                    <div class="item">
+                                        <span class="bullet"></span>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>July 2018 – August 2019 <span class="separator"></span> <span class="font-weight-700">INFOSAT </span></span>
+                                                <span class="d-block font-weight-400 uppercase">
+                                                    Full-Stack Web Developer 
+                                                <span class="separator"></span>
+                                                <span class="font-weight-700"><small> project (IWACO)</small> </span>
+                                                </span>
+                                            </div>
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li><i class="fa fa-circle"></i><p> Created UI pages & Optimized applications for maximum speed.</p></li>
+                                                    <li><i class="fa fa-circle"></i><p> Developed REST API to track drivers location.</p></li>
+                                                    <li><i class="fa fa-circle"></i><p> Integrated  Google Direction API to Search for directions for several modes of transportation, including transit, driving.</p></li>
+                                                    <li><i class="fa fa-circle"></i><p> Increased database performance by optimizing profiles with specific permissions ( Oracle Database). </p></li>
+                                                    <li><i class="fa fa-circle"></i><p> Redesigned drivers/truckers modules by tracking availability based on order volume and destinations. </p></li>
+
+                                                    <li><i class="fa fa-circle"></i><p> Redesigned drivers/truckers modules by tracking availability based on order volume and destinations. </p></li>
+
+                                                    <li><i class="fa fa-circle"></i><p>  Working with Agile methodology. </p></li>
+
+                                                    <li><i class="fa fa-circle"></i><p> Developed web services using RESTful, and Authentication and Authorization modules with JWT. </p></li>
+
+                                                    <li><i class="fa fa-circle"></i><p> Developed web services using RESTful, and Authentication and Authorization modules with JWT. </p></li>
+
+                                                </ul>
+                                             </div>
+                                        </div>
+                                    </div>
+                                    <!-- Item Ends -->
+                                    <!-- Item Starts -->
+                                    <div class="item">
+                                        <span class="bullet"></span>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>May 2018- July 2018 - Vala Netword</span>
+                                                <span class="d-block font-weight-400 uppercase">
+                                                    Full-stack web developer 
+												<span class="separator"></span>
+                                                <span class="font-weight-700"><small>online medical care appointment booking service</small></span>
+                                                </span>
+                                            </div>
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li><i class="fa fa-circle"></i><p>Developed & designed user interfaces for maximum speed and scalability. </p></li>
+                                                    <li><i class="fa fa-circle"></i><p>Created Appointment Scheduling & Appointment Reminders module.</p></li>
+                                                    <li><i class="fa fa-circle"></i><p>Implemented & Redesigned Calendar Management module for doctor.</p></li>
+                                                    <li><i class="fa fa-circle"></i><p>Utilized Infobip SMS Messaging API to confirm and remind appointments.</p></li>
+                                                    <li><i class="fa fa-circle"></i><p>Built REST API for mobile application version with OAuth 2.</p></li>
+                                                    <li><i class="fa fa-circle"></i><p>Reviewed and analyzed client sites for areas that can be improved and optimized.</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Item Ends -->
+                                    <!-- Item Starts -->
+                                    <div class="item">
+                                        <span class="bullet"></span>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>April 2017 - April 2018 - MAROC ANNUAIRE</span>
+                                                <span class="d-block font-weight-400 uppercase">
+                                                    Full-stack web developer
+												<span class="separator"></span>
+                                                <span class="font-weight-700">Mihani Web & Mobile <small>(searching & finding local workers)</small></span>
+                                                </span>
+                                            </div>
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li><i class="fa fa-circle"></i><p>Developed & Designed worker profile,Include profile information, location, credentials and experience.</p></li>
+                                                    <li><i class="fa fa-circle"></i><p>Worked on Search priority based on location preference and the work preference.</p></li>
+                                                    <li><i class="fa fa-circle"></i><p>Created REST API with OAuth 2 for mobile version.</p></li>
+                                                    <li><i class="fa fa-circle"></i><p>Developed mobile application.</p></li>
+                                                    <li><i class="fa fa-circle"></i><p>Implemented REST API and utilized Google Map API.</p></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Item Ends -->
+                                </div>
+
+                            </div>
+                            <!-- Experience Ends -->
+                            <!-- Education Starts -->
+                            <div class="col-xl-6 col-lg-6 col-md-6 skills-container">
+                                <h2 class="font-weight-600 uppercase title-section">Education</h2>
+                                <div class="resume-items">
+                                    <!-- Item Starts -->
+                                    <div class="item">
+                                        <span class="bullet"></span>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>01-2019 - 06-2022</span>
+                                                <span class="d-block font-weight-400 uppercase">
+                                                 Master of Science in Computer Science
+												<span class="separator"></span>
+                                                <span class="font-weight-700">Maharishi International University, Fairfield, Iowa</span>
+                                                </span>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>In progress via distance education; expected completion June 2022.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Item Ends -->
+                                    <!-- Item Starts -->
+                                    <div class="item">
+                                        <span class="bullet"></span>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>09-2014 - 07-2018</span>
+                                                <span class="d-block font-weight-400 uppercase">
+                                                Bachelor of Science in Computer Science
+												<span class="separator"></span>
+                                                <span class="font-weight-700">Ibno-Zohr University, Agadir, Morocco </span>
+                                                </span>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Modern Programming Practices, Mobile Device Programming,Software Engineering, Web Application Programming, Enterprise Architecture, Artificial Intelligence                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Item Ends -->
+                                    
+                                    <!-- Item Starts -->
+                                    <div class="item">
+                                        <span class="bullet"></span>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>06-2014</span>
+                                                <span class="d-block font-weight-400 uppercase">
+                                                    High school degree
+												<span class="separator"></span>
+                                                <span class="font-weight-700">High school Hassan Al-Khiat</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Item Ends -->
+                                </div>
+                            </div>
+                            <!-- Education Ends -->
+                        </div>
+                        <!-- Skills Starts -->
+                        <div class="row skills">
+                            <!-- Skill Bar Starts -->
+                            <div class="col-12">
+                                <h2 class="font-weight-600 uppercase title-section skills-title">skills</h2>
+                            </div>
+							<!-- Skill Bar Starts -->
+                            <div class="col-12 col-sm-6 col-md-6">
+                                <ul>
+                                    <li><b>Languages :</b>  HTML5, CSS3, JavaScript, JAVA , PHP, SQL</li>
+                                    <li>
+                                        <div class="chart-bar">
+                                            <span class="item-progress" data-percent="100" style="width: 100%;"></span>
+                                        </div>
+                                    </li>
+                                    <li><b>Framework : </b>   Spring Boot, Spring Data, Hibernate, Angular 7,Laravel 5</li>
+                                    <li>
+                                        <div class="chart-bar">
+                                            <span class="item-progress" data-percent="100" style="width: 100%;"></span>
+                                        </div>
+                                    </li>
+                                    <li><b>Tools : </b>   Git, GitKraken,IntelliJ, Android Studio, Adobe XD, Dream Weaver</li>
+                                    <li>
+                                        <div class="chart-bar">
+                                            <span class="item-progress" data-percent="100" style="width: 100%;"></span>
+                                        </div>
+                                    </li>
+                                    </ul>
+                            </div>
+                            <!-- Skill Bar Ends -->
+                        </div>
+                        <!-- Skills Starts -->
+                    </div>
+                    <!-- Resume Ends -->
+                </div>
+            </section>
+            <!-- About Section Ends -->
+            <!-- Portfolio Section Starts -->
+            <section id="work">
+                <div class="portfolio-container">
+                    <!-- Main Heading Starts -->
+                    <div class="container page-title text-center">
+                        <h2 class="text-center">my <span>portfolio</span></h2>
+						<span class="title-head-subtitle">“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler</span>
+                    </div>
+                    <!-- Main Heading Ends -->
+                    <div class="portfolio-section">
+                        <div class="container cd-container">
+                            <div>
+                                 <!-- Portfolio Items Starts -->
+                                 <ul class="row" id="portfolio-items">
+                                <!-- Portfolio Item Starts -->
+                                <li class="col-12 col-md-6 col-lg-4">
+                                    <a href="#0" data-type="project-4">
+                                        <img src="img/projects/project-5.jpg" alt="Project" class="img-fluid">
+                                        <div><span>Biography website</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- Portfolio Item Ends -->
+                                <li class="col-12 col-md-6 col-lg-4">
+                                        <a href="#0" data-type="project-2">
+                                            <img src="img/projects/docdispo.jpg" alt="Project" class="img-fluid">
+                                            <div><span>DocDispo.ma (online medical appointment)</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- Portfolio Item Ends -->
+                                <!-- Portfolio Item Starts -->
+                                <li class="col-12 col-md-6 col-lg-4">
+                                    <a href="#0" data-type="project-7">
+                                        <img src="img/projects/project-7.jpg" alt="Project" class="img-fluid">
+                                        <div><span>Mihani Web (Find Workers)</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- Portfolio Item Ends -->
+                                <!-- Portfolio Item Starts -->
+                                <li class="col-12 col-md-6 col-lg-4">
+                                    <a href="#0" data-type="project-9">
+                                        <img src="img/projects/iwaco/iwaco (3).png" alt="Project" class="img-fluid">
+                                        <div><span>Transportation Management System</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- Portfolio Item Ends -->
+                               
+                                    <!-- Portfolio Item Starts -->
+                                    <li class="col-12 col-md-6 col-lg-4">
+                                        <a href="#0" data-type="project-3">
+                                            <img src="img/projects/project-1.jpg" alt="Project" class="img-fluid">
+                                            <div><span>Mihani mobile (Find Workers)</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- Portfolio Item Ends -->
+                                    
+                                    <!-- Portfolio Item Starts -->
+                                    <li class="col-12 col-md-6 col-lg-4">
+                                        <a href="#0" data-type="project-1">
+                                            <img src="img/projects/project-8.jpg" alt="Project" class="img-fluid">
+                                            <div><span>MyTrip Mobile</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- Portfolio Item Ends -->
+                                    <!-- Portfolio Item Starts -->
+                                    
+                                    
+                                </ul>
+                                <!-- Portfolio Items Ends -->
+                            </div>
+                        </div>
+                    </div>
+					<!-- PORTFOLIO OVERLAY STARTS -->
+					<div class="portfolio-overlay"></div>
+					<!-- PORTFOLIO OVERLAY ENDS -->
+                </div>
+                <!-- Portfolio Project Content Starts -->
+                <div class="project-info-container project-1">
+                    <!-- Main Content Starts -->
+                    <div class="project-info-main-content">
+                        <div id="slider" class="carousel slide portfolio-slider" data-ride="carousel">
+                            <!-- The slideshow -->
+                            <div class="carousel-inner phone-slides">
+                                <div class="carousel-item active">
+                                    <img src="img/projects/my-trip/slide1.jpg" alt="slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/projects/my-trip/slide2.jpg" alt="slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/projects/my-trip/slide3.jpg" alt="slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/projects/my-trip/slide4.jpg" alt="slide 1">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#slider" data-slide="prev"> <span class="fa fa-chevron-left carousel-controls"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#slider" data-slide="next"> <span class="fa fa-chevron-right carousel-controls"></span>
+                            </a>
+                        </div>
+                         
+                    </div>
+                    <!-- Main Content Ends -->
+                    <!-- Project Details Starts -->
+                    <div class="projects-info row">
+                        <div class="col-12 col-sm-12 p-none">
+                            <ul class="project-details">
+                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">MyTrip</span>
+                                </li>
+                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">personal project</span>
+                                </li>
+                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">4 months</span>
+                                </li>
+                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase">React native Framework, Nodejs, MongoDb & Express</span>
+                                </li>
+                                <li><i class="fa fa-info"></i> <span class="font-weight-400 project-label"> info</span> :  <p>MyTrip lets you share your travel photos with the people who want to see everything.</p>
+                                </li>
+                            </ul>
+                            <a href="https://play.google.com/store/apps/details?id=com.mytripmorocco.elmaachimohamed" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
+                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
+                        </div>
+                    </div>
+                    <!-- Project Details Ends -->
+                </div>
+                <!-- Portfolio Project Content Ends -->
+                <!-- Portfolio Project Content Starts -->
+                <div class="project-info-container project-2">
+                    <!-- Main Content Starts --> 
+                    <div class="project-info-main-content">
+                        <div class="videocontainer">
+                            <iframe class="youtube-video" src="https://www.youtube.com/embed/NbwAMqIoI78?enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!-- Main Content Ends -->
+                    <!-- Project Details Starts -->
+                    <div class="projects-info row">
+                        <div class="col-12 col-sm-12 p-none">
+                            <ul class="project-details">
+                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">DocDispo.ma</span>
+                                </li>
+                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">DocDispo</span>
+                                </li>
+                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">24 months</span>
+                                </li>
+                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase"><p>Spring framework, Angular 7 framework, MySQL database, JavaScript. IntelliJ and Visual Studio, Git, Docker.</p></span>
+                                </li>
+                                <li><i class="fa fa-info"></i> <span class="font-weight-400 project-label"> info</span> : <p>DocDispo is created to help connect patients with doctors, beginning with online appointment-booking . With DocDispo, patients can see doctors open appointment times and book instantly online, make informed choices with verified r eviews, and stay on top of important checkups with SMS and Emails reminders</p>
+                                </li>
+                            </ul>
+                            <a href="https://www.docdispo.ma/" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
+                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
+                        </div>
+                    </div>
+                    <!-- Project Details Ends -->
+                </div>
+                <!-- Portfolio Project Content Ends -->
+                <!-- Portfolio Project Content Starts -->
+                <div class="project-info-container project-3">
+                    <!-- Main Content Starts -->
+                    <div class="project-info-main-content">
+                        <div id="slider1" class="carousel slide portfolio-slider" data-ride="carousel">
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/projects/project-1.jpg" alt="slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/projects/project-2.jpg" alt="slide 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/projects/project-3.jpg" alt="slide 2">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#slider1" data-slide="prev"> <span class="fa fa-chevron-left carousel-controls"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#slider1" data-slide="next"> <span class="fa fa-chevron-right carousel-controls"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Main Content Ends -->
+                    <!-- Project Details Starts -->
+                    <div class="projects-info row">
+                        <div class="col-12 col-sm-12 p-none">
+                            <ul class="project-details">
+                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">Mihani mobile</span>
+                                </li>
+                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">ALBANKI client</span>
+                                </li>
+                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">4 months</span>
+                                </li>
+                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <p>Java,XML, google/gson, Eclipse, (backend : Laravel 5, Mysql) </p>
+                                </li>
+                                <li><i class="fa fa-info"></i> <span class="font-weight-400 project-label"> info</span> :  <p>Find A Worker is the easiest and best way for employers to post job vacancies and hire fast. It is also the easiest way to get hired for the exact job you’ve been looking for.</p>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
+                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
+                        </div>
+                    </div>
+                    <!-- Project Details Ends -->
+
+                </div>
+                <!-- Portfolio Project Content Ends -->
+                <!-- Portfolio Project Content Starts -->
+                <div class="project-info-container project-4">
+                    <!-- Main Content Starts -->
+                    <div class="project-info-main-content">
+                        <div id="slider2" class="carousel slide portfolio-slider" data-ride="carousel">
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/projects/project-5.jpg" alt="slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/projects/project-6.jpg" alt="slide 2">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#slider2" data-slide="prev"> <span class="fa fa-chevron-left carousel-controls"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#slider2" data-slide="next"> <span class="fa fa-chevron-right carousel-controls"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Main Content Ends -->
+                    <!-- Project Details Starts -->
+                    <div class="projects-info row">
+                        <div class="col-12 col-sm-12 p-none">
+                        
+                            <ul class="project-details">
+                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">Biography website</span>
+                                </li>
+                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">belabchirfouzia.com</span>
+                                </li>
+                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">1 month</span>
+                                </li>
+                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase">HTML5/CSS3,PHP,JavaScript,JQuery</span>
+                                </li>
+                                <li><i class="fa fa-info"></i> <span class="font-weight-400 project-label"> Info</span> : <p>Artist biography of BELBACHIR fouzia with gallery </p>
+                                </li>
+                                
+                            </ul>
+                            <a href="http://belabchirfouzia.com/" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
+                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
+                        </div>
+                    </div>
+                    <!-- Project Details Ends -->
+                </div>
+                <!-- Portfolio Project Content Ends -->
+                <!-- Portfolio Project Content Starts -->
+                <div class="project-info-container project-6">
+                    <!-- Main Content Starts -->
+                    <div class="project-info-main-content">
+                        <img src="img/projects/project-4.jpg" alt="Project Image">
+                    </div>
+                    <!-- Main Content Ends -->
+                    <!-- Project Details Starts -->
+                    <div class="projects-info row">
+                        <div class="col-12 col-sm-12 p-none">
+                         
+                            <ul class="project-details">
+                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">Website</span>
+                                </li>
+                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">Agilisys.ma</span>
+                                </li>
+                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">1 month</span>
+                                </li>
+                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase"><p>Spring framework, JavaScript. IntelliJ and Visual Studio, Git, Docker.</p></span>
+                                </li>
+                                <li><i class="fa fa-info"></i> <span class="font-weight-400 project-label"> info</span> : <p>Agilisys is an expert in the integration of new technology, solution provider of technological strategy, IT services, application development and support. Agilisys advises and offers a full range of applications, integrations and services in the fields of IT and communication.</p>
+                                </li>
+                            </ul>
+                            <a href="http://agilisys.ma/" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
+                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
+                        </div>
+                    </div>
+                    <!-- Project Details Ends -->
+                </div>
+                <!-- Portfolio Project Content Ends -->
+                <!-- Portfolio Project Content Starts -->
+                <div class="project-info-container project-7">
+                    <!-- Main Content Starts -->
+                    <div class="project-info-main-content">
+                        <img src="img/projects/project-7.jpg" alt="Project Image">
+                    </div>
+                    <!-- Main Content Ends -->
+                    <!-- Project Details Starts -->
+                    <div class="projects-info row">
+                        <div class="col-12 col-sm-12 p-none">
+                            <ul class="project-details">
+                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">mihani.ma</span>
+                                </li>
+                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">mihani</span>
+                                </li>
+                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">2 months</span>
+                                </li>
+                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase"><p>Laravel 5 framework, MySQL database, JavaScript. IntelliJ and Visual Studio, Git, Docker.</p></span>
+                                </li>
+                                <li><i class="fa fa-info"></i> <span class="font-weight-400 project-label"> info</span> :  <p>Find A Worker is the easiest and best way for employers to post job vacancies and hire fast. It is also the easiest way to get hired for the exact job you’ve been looking for.</p>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
+                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
+                        </div>
+                    </div>
+                    <!-- Project Details Ends -->
+                </div>
+                <!-- Portfolio Project Content Ends -->
+				<!-- Portfolio Project Content Starts -->
+                <div class="project-info-container project-9">
+                    <!-- Main Content Starts -->
+                    <div class="project-info-main-content">
+                        <div id="slider3" class="carousel slide portfolio-slider" data-ride="carousel">
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/projects/iwaco/iwaco (1).png" alt="slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/projects/iwaco/iwaco (2).png" alt="slide 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/projects/iwaco/iwaco (3).png" alt="slide 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/projects/iwaco/iwaco (4).png" alt="slide 2">
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="carousel-control-prev" href="#slider3" data-slide="prev"> <span class="fa fa-chevron-left carousel-controls"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#slider3" data-slide="next"> <span class="fa fa-chevron-right carousel-controls"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Main Content Ends -->
+                    <!-- Project Details Starts -->
+                    <div class="projects-info row">
+                        <div class="col-12 col-sm-12 p-none">
+                            <ul class="project-details">
+                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">Logistics Tracking</span>
+                                </li>
+                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">IWACO</span>
+                                </li>
+                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">14 months</span>
+                                </li>
+                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase"><p>Spring framework, Angular 7 framework, MySQL database, JavaScript. IntelliJ and Visual Studio, Git, Docker.</p></span>
+                                </li>
+                                <li><i class="fa fa-info"></i> <span class="font-weight-400 project-label"> info</span> : <p>Logistics tracking refers to the methods and systems used for tracking resources throughout their movement and storage</p>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
+                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
+                        </div>
+                    </div>
+                    <!-- Project Details Ends -->
+                </div>
+                <!-- Portfolio Project Content Ends -->
+                <span class="back-mobile close-project"><i class="fa fa-arrow-left"></i></span>
+            </section>
+            <!-- Portfolio Section Ends -->
+            <!-- Contact Section Starts -->
+            <section id="contact">
+                <div class="contact-container">
+                    <!-- Main Heading Starts -->
+                    <div class="container page-title text-center">
+                        <h2 class="text-center">get <span>in touch</span></h2>
+						<span class="title-head-subtitle">I’m always open to discussing.</span>
+                    </div>
+                    <!-- Main Heading Ends -->
+                    <div class="container">
+                        <div class="row contact">
+                            <!-- Contact Infos Starts -->
+                            <div class="col-12 col-md-4 col-xl-4 leftside">
+                                <ul class="custom-list">
+                                    <li>
+                                        <h6 class="font-weight-600"> <span class="contact-title">Phone</span><i class="fa fa-whatsapp"></i><span class="contact-content">+1 (904)-418-7400</span></h6>
+                                    </li>
+                                    <li>
+                                        <h6 class="font-weight-600"> <span class="contact-title">email</span><i class="fa fa-envelope-o fs-14"></i><span class="contact-content">hicham.dandan@gmail.com</span></h6>
+
+                                    </li>
+                                </ul>
+
+                                <!-- Social Media Profiles Starts -->
+
+                                <div class="social">
+                                    <h6 class="font-weight-600 uppercase">Social Profiles</h6>
+                                    <ul class="list-inline social social-intro text-center p-none">
+                                        <li class="facebook"><a title="Facebook" href="https://www.facebook.com/hicham.dan15"><i class="fa fa-facebook"></i></a>
+                                        </li>
+                                        <li class="twitter"><a title="Twitter" href="https://www.linkedin.com/in/hicham-dandan"><i class="fa fa-linkedin"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Social Media Profiles Ends -->
+                            </div>
+                            <!-- Contact Infos Ends -->
+                            <!-- Contact Form Starts -->
+                            <div class="col-12 col-md-8 col-xl-8 rightside">
+                                <p>
+                                    If you have any suggestion, project or even you want to say Hello.. please fill out the form below and I will reply you shortly.
+                                </p>
+                                <form class="contactform" method="post" action="php/process-form.php">
+                                    <div class="row">
+                                        <!-- Name Field Starts -->
+                                        <div class="form-group col-xl-6"> <i class="fa fa-user prefix"></i>
+                                            <input id="name" name="name" type="text" class="form-control" placeholder="YOUR NAME" required>
+                                        </div>
+                                        <!-- Name Field Ends -->
+                                        <!-- Email Field Starts -->
+                                        <div class="form-group col-xl-6"> <i class="fa fa-envelope prefix"></i>
+                                            <input id="email" type="email" name="email" class="form-control" placeholder="YOUR EMAIL" required>
+                                        </div>
+                                        <!-- Email Field Ends -->
+                                        <!-- Comment Textarea Starts -->
+                                        <div class="form-group col-xl-12"> <i class="fa fa-comments prefix"></i>
+                                            <textarea id="comment" name="comment" class="form-control" placeholder="YOUR MESSAGE" required></textarea>
+                                        </div>
+                                        <!-- Comment Textarea Ends -->
+                                    </div>
+                                    <!-- Submit Form Button Starts -->
+                                    <div class="submit-form">
+                                        <button class="btn button-animated" type="submit" name="send"><span><i class="fa fa-send"></i> Send Message</span></button>
+                                    </div>
+                                    <!-- Submit Form Button Ends -->
+                                    <div class="form-message"> <span class="output_message text-center font-weight-600 uppercase"></span>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Contact Form Ends -->
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact Section Ends -->
+        </main>
     </div>
-</header>
-
-<div class="name">
-    <h1>Hicham Dandan</h1>
-</div>
-
-<h1>Assignments</h1>
-<div class="container">
-
-    <div class="item">
-        <a href="index.html"><h2>W1D1</h2></a>
-        <p>this homepage</p>
+    <!-- Main Content Ends -->
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="preloader-container">
+            <h1>Hicham</h1>
+            <div id="progress-line-container">
+                <div class="progress-line"></div>
+            </div>
+            <h1>DANDAN</h1>
+        </div>
     </div>
+    <!-- Preloader Ends -->
 
-    <div class="item">
-        <a href="aboutMe.html"><h2>W1D2</h2></a>
-        <p>About Me</p>
-    </div>
-    <div class="item">
-        <a href="recipe.html"><h2>W1D3</h2></a>
-        <p>Recipe</p>
-    </div>
-
-    <div class="item">
-        <a href="movie.html"><h2>W1D4</h2></a>
-        <p>Movie Review</p>
-    </div>
-
-    <div class="item">
-        <a href="responsive.html"><h2>W1D5</h2></a>
-        <p>responsive Design with FlexBox</p>
-    </div>
-
-    <div class="item">
-        <a href="responsive-bootstrap.html"><h2>W1D5</h2></a>
-        <p>responsive Design with bootstrap</p>
-    </div>
-
-    <div class="item">
-        <a href="asciianimation.html"><h2>W1D6</h2></a>
-        <p>Ascii Animation</p>
-    </div>
-
-    <div class="item">
-        <a href="decorate&animate.html"><h2>W1D6</h2></a>
-        <p>Decorate and Animate</p>
-    </div>
-
-    <div class="item">
-        <a href="functionalProgrammig.html"><h2>W2D1</h2></a>
-        <p>functional Programmig</p>
-    </div>
-
-    <div class="item">
-        <a href="form1.html"><h2>W2D2</h2></a>
-        <p>Form 1</p>
-    </div>
-
-    <div class="item">
-        <a href="form2.html"><h2>W2D2</h2></a>
-        <p>Form 2</p>
-    </div>
-
-    <div class="item">
-        <a href="inheritance.html"><h2>W2D3</h2></a>
-        <p>inheritance and testing</p>
-    </div>
-
-    <div class="item">
-        <a href="class.html"><h2>W3D1</h2></a>
-        <p>Classes, inheritance and Testing</p>
-    </div>
-
-    <div class="item">
-        <a href="cleanScrean.html"><h2>W3D2</h2></a>
-        <p>Clean Screen</p>
-    </div>
-
-    <div class="item">
-        <a href="maze.html"><h2>W3D3</h2></a>
-        <p>Maze Mouse</p>
-    </div>
-
-
-</div>
-
-<footer>
-    <a href="https://validator.w3.org/check/referer"> <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator"/></a>
-    <a href="https://jigsaw.w3.org/css-validator/check/referer"> <img src="http://mumstudents.org/cs472/2013-09/images/w3c-css.png" alt="css validator"/></a>
-    <p>&copy; Hicham Dandan</p>
-    <p>Maharishi University of Managment</p>
-    <p>1000 N 4th Street, Fairfield, Iowa, 52557</p>
-    <p>Email : hdandan@miu.edu</p>
-</footer>
+    <!-- Template JS Files -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.animatedheadline.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/transition.js"></script>
+    <!-- Live Style Switcher JS File - 
+    <script src="js/styleswitcher.js"></script>only demo -->
+    <!-- Main JS Initialization File -->
+    <script src="js/custom.js"></script>
 </body>
+
 </html>
