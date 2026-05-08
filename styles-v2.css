@@ -270,7 +270,11 @@ img { display: block; max-width: 100%; }
   width: 6px; height: 6px; border-radius: 50%; background: #d6ff48;
   animation: pulseV2 1.5s infinite;
 }
-@media (max-width: 768px) { .v2-nav-links { display: none; } }
+@media (max-width: 768px) {
+  .v2-nav-links { display: none; }
+  .v2-logo .stack { display: none; }
+  .v2-nav { padding: 16px 0; }
+}
 
 /* ---------- Hero ---------- */
 .v2-hero {
@@ -1618,12 +1622,15 @@ img { display: block; max-width: 100%; }
   .v2-contact-cta {
     display: flex;
     width: 100%;
-    padding: 24px 28px;
-    font-size: clamp(16px, 5vw, 22px);
+    padding: 20px 20px;
+    font-size: 14px;
     justify-content: space-between;
     border-radius: 16px;
+    letter-spacing: -.01em;
+    margin-bottom: 40px;
+    gap: 12px;
   }
-  .v2-contact-cta .arrow-circle { width: 44px; height: 44px; flex-shrink: 0; }
+  .v2-contact-cta .arrow-circle { width: 40px; height: 40px; flex-shrink: 0; }
 
   /* Experience */
   .v2-exp-item { grid-template-columns: 1fr; gap: 12px; padding: 32px 0; }
