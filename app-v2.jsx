@@ -199,7 +199,7 @@ function HeroV2({ onScrollTo, started }) {
           {started &&
           <>
               <div className="v2-hero-row">
-                <span className="v2-hero-num">5<sup>yrs</sup></span>
+                <span className="v2-hero-num">5<sup>yrs</sup>&nbsp;of</span>
                 <h1 className="v2-hero-headline">
                   <WordReveal delay={0}>{[{ text: 'Software' }]}</WordReveal>
                   <WordReveal delay={120}>{[{ text: 'engineered', ital: true, accent: true }]}</WordReveal>
