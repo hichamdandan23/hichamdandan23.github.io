@@ -532,7 +532,13 @@ img { display: block; max-width: 100%; }
   .v2-hero { padding: 80px 0 60px; }
   .v2-hero-top { flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
   .v2-hero-top .group.right { align-items: flex-start; text-align: left; }
-  .v2-hero-num { font-size: clamp(48px, 12vw, 80px); }
+  .v2-hero-row { display: block; }
+  .v2-hero-num {
+    display: inline;
+    font-size: clamp(28px, 8vw, 42px);
+    line-height: .96;
+  }
+  .v2-hero-headline { display: inline; font-size: clamp(28px, 8vw, 42px); }
 }
 .v2-hero-lede {
   font-size: clamp(16px, 1.3vw, 19px);
