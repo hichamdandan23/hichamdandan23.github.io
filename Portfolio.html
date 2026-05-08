@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hicham Dandan — Software Engineer</title>
+  <meta name="description" content="Portfolio of Hicham Dandan, software engineer with 5+ years building scalable backend platforms, automation tooling, and observability systems." />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script src="data.js"></script>
+</head>
+<body>
+  <div class="grain"></div>
+  <div id="page-trans" class="page-trans"></div>
+  <div id="root"></div>
+
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="components.jsx"></script>
+  <script type="text/babel" src="sections.jsx"></script>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+      "accent": "#10b981",
+      "theme": "dark",
+      "fonts": "dmserif",
+      "hero": "A",
+      "grain": 0.06
+    }/*EDITMODE-END*/;
+
+    const ACCENTS = {
+      '#10b981': 'emerald',
+      '#4f46e5': 'indigo',
+      '#f59e0b': 'amber',
+      '#e11d48': 'crimson',
+      '#f5f5f4': 'mono'
+    };
+
+    function App() {
+      const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+      const [activeCase, setActiveCase] = useState(null);
+      const [active, setActive] = useState('top');
+
+      // Apply theme + fonts + accent + grain
+      useEffect(() => {
+        document.documentElement.setAttribute('data-theme', t.theme);
+        document.documentElement.setAttribute('data-fonts', t.fonts);
+        document.documentElement.style.setProperty('--accent', t.accent);
+        // derive a slightly lighter accent-2
+        document.documentElement.style.setProperty('--accent-2', t.accent);
+        document.documentElement.style.setProperty('--grain', String(t.grain));
+      }, [t.theme, t.fonts, t.accent, t.grain]);
+
+      // active section observer
+      useEffect(() => {
+        const ids = ['work', 'about', 'experience', 'contact'];
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) setActive(e.target.id);
+          });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+        ids.forEach(id => {
+          const el = document.getElementById(id);
+          if (el) io.observe(el);
+        });
+        return () => io.disconnect();
+      }, []);
+
+      const scrollTo = (id) => {
+        if (id === 'top') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+        const el = document.getElementById(id);
+        if (el) {
+          const y = el.getBoundingClientRect().top + window.scrollY - 60;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      };
+
+      const openCase = (project) => {
+        const trans = document.getElementById('page-trans');
+        trans.classList.remove('in');
+        // force reflow
+        void trans.offsetWidth;
+        trans.classList.add('in');
+        setTimeout(() => setActiveCase(project), 450);
+      };
+      const closeCase = () => {
+        const trans = document.getElementById('page-trans');
+        trans.classList.remove('in');
+        void trans.offsetWidth;
+        trans.classList.add('in');
+        setTimeout(() => setActiveCase(null), 450);
+      };
+
+      const Hero = t.hero === 'A' ? HeroA : t.hero === 'B' ? HeroB : HeroC;
+
+      return (
+        <>
+          <Cursor />
+          <Nav onNav={scrollTo} active={active} />
+          <main id="top">
+            <Hero accent={t.accent} onScrollTo={scrollTo} />
+            <Work onOpenCase={openCase} />
+            <About />
+            <Experience />
+            <Contact />
+            <Footer />
+          </main>
+          {activeCase && <CaseStudy project={activeCase} onClose={closeCase} onOpen={openCase} />}
+
+          <TweaksPanel title="Tweaks">
+            <TweakSection label="Theme" />
+            <TweakRadio label="Mode" value={t.theme}
+                        options={['dark', 'light']}
+                        onChange={(v) => setTweak('theme', v)} />
+            <TweakColor label="Accent" value={t.accent}
+                        options={['#10b981', '#4f46e5', '#f59e0b', '#e11d48', '#f5f5f4']}
+                        onChange={(v) => setTweak('accent', v)} />
+            <TweakSlider label="Grain" value={t.grain} min={0} max={0.2} step={0.01}
+                         onChange={(v) => setTweak('grain', v)} />
+
+            <TweakSection label="Typography" />
+            <TweakSelect label="Headline font" value={t.fonts}
+                         options={[
+                           { value: 'instrument', label: 'Instrument Serif' },
+                           { value: 'playfair', label: 'Playfair Display' },
+                           { value: 'dmserif', label: 'DM Serif Display' },
+                           { value: 'fraunces', label: 'Fraunces' },
+                           { value: 'sans', label: 'Inter (all sans)' },
+                         ]}
+                         onChange={(v) => setTweak('fonts', v)} />
+
+            <TweakSection label="Hero variant" />
+            <TweakRadio label="Treatment" value={t.hero}
+                        options={['A', 'B', 'C']}
+                        onChange={(v) => setTweak('hero', v)} />
+            <div style={{ fontSize: 10.5, color: 'rgba(41,38,27,.55)', marginTop: -4, lineHeight: 1.4 }}>
+              A — Massive type · B — Split + marquee · C — Centered statement
+            </div>
+          </TweaksPanel>
+        </>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
