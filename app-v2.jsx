@@ -200,7 +200,7 @@ function HeroV2({ onScrollTo, started }) {
           <>
               <div className="v2-hero-row">
                 <span className="v2-hero-num">5<sup>yrs</sup></span>
-                <h1 className="v2-hero-headline" style={{ whiteSpace: 'nowrap' }}>
+                <h1 className="v2-hero-headline">
                   <WordReveal delay={0}>{[{ text: 'Software' }]}</WordReveal>
                   <WordReveal delay={120}>{[{ text: 'engineered', ital: true, accent: true }]}</WordReveal>
                   <WordReveal delay={220}>{[{ text: 'with' }, { text: 'craft,' }]}</WordReveal>
