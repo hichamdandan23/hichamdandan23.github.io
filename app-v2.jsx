@@ -207,7 +207,6 @@ function HeroV2({ onScrollTo, started }) {
                   <WordReveal delay={420}>{[{ text: 'shipped' }, { text: 'with', ital: true }]}</WordReveal>
                   <WordReveal delay={580}>{[{ text: 'care.', ital: true, accent: true }]}</WordReveal>
                 </h1>
-                <span className="v2-hero-tag solid"><span className="dot" style={{ background: 'var(--accent-ink)' }}></span>Available May '26</span>
               </div>
 
               <div style={{ marginTop: 32, display: 'flex', flexDirection: 'column', gap: 24 }}>
