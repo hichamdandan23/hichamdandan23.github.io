@@ -183,7 +183,7 @@ function HeroV2({ onScrollTo, started }) {
         <div className="v2-hero-top">
           <div className="group">
             <span>Portfolio</span>
-            <span className="v">2020 → 2026</span>
+            <span className="v">2018 → 2026</span>
           </div>
           <div className="group">
             <span>Discipline</span>
@@ -199,7 +199,7 @@ function HeroV2({ onScrollTo, started }) {
           {started &&
           <>
               <div className="v2-hero-row">
-                <span className="v2-hero-num">5<sup>yrs</sup>&nbsp;of</span>
+                <span className="v2-hero-num">6<sup>+ yrs</sup>&nbsp;of</span>
                 <h1 className="v2-hero-headline">
                   <WordReveal delay={0}>{[{ text: 'Software' }]}</WordReveal>
                   <WordReveal delay={120}>{[{ text: 'engineered', ital: true, accent: true }]}</WordReveal>
@@ -212,7 +212,7 @@ function HeroV2({ onScrollTo, started }) {
               <div style={{ marginTop: 32, display: 'flex', flexDirection: 'column', gap: 24 }}>
                 <RevealV2 delay={700}>
                   <p className="v2-hero-lede">
-                    I'm Hicham — an experienced senior software engineer with five years building
+                    I'm Hicham — an experienced senior software engineer with six+ years building
                     <em> efficient, scalable </em>solutions across web, back-end, and
                     automation. Drawn to the unglamorous middle of products: ledgers,
                     pipelines, the tools that earn trust over years.
@@ -315,7 +315,19 @@ function VisualV2({ project }) {
   }
   if (project.visual === 'v2-vis-1') {
     return (
-      <div className={`v2-vis-1`} style={{ position: 'absolute', inset: 0 }}>
+      <div className="v2-vis-5" style={{ position: 'absolute', inset: 0 }}>
+        <div className="terminal">
+          <div className="ttl">
+            <span className="dot"></span><span className="dot"></span><span className="dot"></span>
+            <span>ai@uplearn:~/rag</span>
+          </div>
+          <div><span className="cm"># semantic vector retrieval</span></div>
+          <div><span className="pr">$</span> rag query --doc=eval_iep --top_k=5</div>
+          <div><span className="cm">↳ pgvector scan [10,000+ embeddings]</span></div>
+          <div><span className="cm">↳ redis cache hit: 0.8ms</span></div>
+          <div><span className="ok">✓ 5 contexts grounded in 62ms (&lt;80ms)</span></div>
+          <div><span className="pr">$</span> <span className="blink"></span></div>
+        </div>
       </div>);
 
   }
@@ -433,7 +445,7 @@ function WorkV2({ onOpen }) {
         <div className="v2-section-head">
           <RevealV2 className="v2-section-meta">
             <span className="num">Selected Work</span>
-            <span>2020 — 2026 / 06 cases</span>
+            <span>2018 — 2026 / 03 cases</span>
           </RevealV2>
           <RevealV2>
             <h2 className="v2-section-title">
@@ -531,10 +543,10 @@ function AboutV2() {
 
             <RevealV2 stagger>
               <div className="v2-stats">
-                <div className="v2-stat"><div className="v">5<span className="ital">+</span></div><div className="k">Years shipping</div></div>
-                <div className="v2-stat"><div className="v">4<span className="ital">×</span></div><div className="k">Interns mentored</div></div>
-                <div className="v2-stat"><div className="v">200<span className="ital">+</span></div><div className="k">Properties integrated</div></div>
-                <div className="v2-stat"><div className="v">3<span className="ital">×</span></div><div className="k">Onboarding throughput</div></div>
+                <div className="v2-stat"><div className="v">6<span className="ital">+</span></div><div className="k">Years shipping</div></div>
+                <div className="v2-stat"><div className="v">15k<span className="ital">+</span></div><div className="k">AI sessions served</div></div>
+                <div className="v2-stat"><div className="v">200<span className="ital">+</span></div><div className="k">Facilities scaled</div></div>
+                <div className="v2-stat"><div className="v">99.9<span className="ital">%</span></div><div className="k">Peak reliability</div></div>
               </div>
             </RevealV2>
 
@@ -579,6 +591,7 @@ function ExperienceV2() {
           <RevealV2 key={i} className="v2-exp-item" delay={i * 60}>
               <div className="v2-exp-period">
                 {e.now ? <span className="now">{e.period}</span> : <span>{e.period}</span>}
+                {e.duration && <span className="v2-exp-duration">{e.duration}</span>}
                 <span>{e.location}</span>
               </div>
               <div className="v2-exp-body">
@@ -588,7 +601,17 @@ function ExperienceV2() {
                     <span className="ital">— {e.company}</span>
                   </h3>
                   <ul className="v2-exp-bullets">
-                    {e.bullets.map((b, bi) => <li key={bi}>{b}</li>)}
+                    {e.bullets.map((b, bi) => {
+                      const colonIdx = b.indexOf(': ');
+                      if (colonIdx > 0 && colonIdx < 60) {
+                        return (
+                          <li key={bi}>
+                            <strong>{b.slice(0, colonIdx)}:</strong> {b.slice(colonIdx + 2)}
+                          </li>
+                        );
+                      }
+                      return <li key={bi}>{b}</li>;
+                    })}
                   </ul>
                   <div className="v2-work-tags">
                     {e.tags.map((t) => <span key={t} className="v2-tag">{t}</span>)}
@@ -743,7 +766,7 @@ function CaseStudyV2({ project, onClose }) {
           <div className="v2-case-cell"><div className="k">Role</div><div className="v">{project.role}</div></div>
           <div className="v2-case-cell"><div className="k">Year</div><div className="v">{project.year}</div></div>
           <div className="v2-case-cell"><div className="k">Timeline</div><div className="v">{project.timeline}</div></div>
-          <div className="v2-case-cell"><div className="k">Stack</div><div className="v">{project.tags.slice(0,2).join(', ')}</div></div>
+          <div className="v2-case-cell"><div className="k">Stack</div><div className="v">{project.tags.slice(0, 4).join(', ')}</div></div>
         </section>
 
         <section className="v2-case-section">
@@ -754,12 +777,23 @@ function CaseStudyV2({ project, onClose }) {
         <section className="v2-case-section">
           <div className="v2-case-label">Process</div>
           <ol className="v2-case-steps">
-            {project.process.map((p, i) => (
-              <li key={i}>
-                <span className="step-num">/{String(i + 1).padStart(2, '0')}</span>
-                <span className="step-body">{p}</span>
-              </li>
-            ))}
+            {project.process.map((p, i) => {
+              const colonIdx = p.indexOf(': ');
+              return (
+                <li key={i}>
+                  <span className="step-num">/{String(i + 1).padStart(2, '0')}</span>
+                  <span className="step-body">
+                    {colonIdx > 0 && colonIdx < 60 ? (
+                      <>
+                        <strong>{p.slice(0, colonIdx)}:</strong> {p.slice(colonIdx + 2)}
+                      </>
+                    ) : (
+                      p
+                    )}
+                  </span>
+                </li>
+              );
+            })}
           </ol>
         </section>
 
@@ -776,7 +810,7 @@ function CaseStudyV2({ project, onClose }) {
         </section>
 
         <footer className="v2-case-foot">
-          <span>End of case · {project.num} / 06</span>
+          <span>End of case · {project.num} / {String(window.PROJECTS_V2.length).padStart(2, '0')}</span>
           <button className="v2-case-close ghost" onClick={onClose} data-cursor="close">
             ← Back to work
           </button>
